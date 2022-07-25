@@ -1,0 +1,38 @@
+.communityInput {
+  height: 100px;
+}
+.onSubmit {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  color: var(--fontcolor);
+  div {
+    opacity: 0;
+    transition: opacity 0.8s linear;
+    &.Success {
+      opacity: 1;
+    }
+  }
+}
+input,
+textarea {
+  width: 450px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: rgba(105, 105, 105, 0.287);
+  border: 1px solid dimgray;
+  color: var(--fontcolor);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+}
+label {
+  color: var(--fontcolor);
+  font-size: 17px;
+}

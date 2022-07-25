@@ -1,0 +1,54 @@
+.contactBox {
+  padding-top: 30px;
+}
+.contactLabel {
+  display: flex;
+  justify-content: center;
+}
+.contactInput {
+  width: 250px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.onSubmit {
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  color: var(--fontcolor);
+
+  div {
+    opacity: 0;
+    transition: opacity 0.8s linear;
+    &.Success {
+      opacity: 1;
+    }
+  }
+}
+input,
+textarea {
+  width: 450px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: rgba(105, 105, 105, 0.287);
+  box-shadow: 1px 1px 20px #6dff1f;
+  color: var(--fontcolor);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+}
+label {
+  color: var(--fontcolor);
+  font-size: 17px;
+}
+.submitButton {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}

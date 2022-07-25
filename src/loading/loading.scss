@@ -1,0 +1,11 @@
+.loadingImage {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 11;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

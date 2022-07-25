@@ -1,0 +1,136 @@
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 2px;
+  color: rgb(221, 216, 216);
+  border: none;
+  background: none;
+  background-color: black;
+}
+.bg {
+  position: absolute;
+  background-repeat: no-repeat;
+  background: rgb(10, 11, 11);
+  background: radial-gradient(
+    circle,
+    rgba(10, 11, 11, 1) 0%,
+    rgba(1, 100, 109, 1) 10%,
+    rgba(0, 0, 0, 0) 30%
+  );
+  width: 100%;
+  height: 200x;
+  top: 35px;
+
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.bgAnimate {
+  animation: shiny_like_the_moon 3s forwards;
+  @keyframes shiny_like_the_moon {
+    from {
+      width: 0%;
+      margin: 0px 50%;
+      opacity: 0;
+    }
+    to {
+      width: 100%;
+      margin: 0px 0%;
+      opacity: 1;
+    }
+  }
+}
+.heading {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 70px;
+  width: 100%;
+}
+.logo {
+  position: absolute !important;
+  top: 35px;
+  width: 150px;
+  height: 138px;
+}
+@keyframes load_up {
+  from {
+    opacity: 0;
+    top: 245px;
+  }
+  to {
+    opacity: 1;
+    top: 35px;
+  }
+}
+.logoAnimate {
+  animation: load_up 3s forwards;
+  @keyframes load_up {
+    from {
+      opacity: 0;
+      top: 245px;
+    }
+    to {
+      opacity: 1;
+      top: 35px;
+    }
+  }
+}
+.logo-centered {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+.menu .active {
+  box-shadow: 0px 0px 20px #6dff1f;
+}
+.siteTitle {
+  font-family: titleFont;
+  z-index: 10;
+  margin-top: 140px;
+  font-size: 35px;
+  color: black;
+  text-align: center;
+  text-shadow: 0px 2px 2px green, 12px 12px 30px rgba(1, 100, 109, 1),
+    0px 0px 30px rgba(1, 100, 109, 1);
+  letter-spacing: 4px;
+}
+h1 {
+  text-shadow: 2px 2px green;
+}
+
+.menuBar {
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 2px;
+  color: rgb(221, 216, 216);
+  border: none;
+  background: none;
+  background-color: black;
+}
+a {
+  text-decoration: none;
+  background: rgba(0, 8, 2, 0.671);
+  border-radius: 4px;
+  font-size: 16px;
+  color: var(--fontcolor);
+  margin: 3px;
+}
