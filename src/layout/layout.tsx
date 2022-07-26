@@ -31,17 +31,18 @@ export const Layout = ({ children, showAnimation = false }: LogoProps) => {
               <ContactUsButton
                 href="https://www.instagram.com/3rdharmonicrecords"
                 socialNetworkType="instagram"
-                text="3RD HARMONIC RECORDS"
+                text="@3RD HARMONIC RECORDS"
               />
               <ContactUsButton
                 href="https://www.instagram.com/iamhat3trick"
                 socialNetworkType="instagram"
-                text="HAT3TRICK"
+                text="@HAT3TRICK"
               />
             </div>
           </div>
-          <div className="contactUs">
-            <h5 onClick={() => toggleText()}>Contact Us</h5>
+          <div className="contactUs" onClick={() => toggleText()}>
+            <h5>Contact Us</h5>
+            <span className={show ? "close" : "hide"}>&times;</span>
           </div>
         </div>
         <main>{children}</main>

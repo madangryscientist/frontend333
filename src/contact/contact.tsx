@@ -42,14 +42,15 @@ const Contact = () => {
       return errors;
     },
   });
-  // useEffect(() => {
-  //   console.log("effect", formik.values, submitted);
-  //   if (submitted) {
-  //     setMessageClass("");
-  //     setSubmitted(false);
-  //     setMessage("");
-  //   }
-  // }, [formik.values]);
+  setTimeout(() => {
+    console.log("effect", formik.values, submitted);
+    if (submitted) {
+      setMessageClass("");
+      setSubmitted(false);
+      setMessage("");
+    }
+  }, 2000);
+
   return (
     <Layout>
       <form onSubmit={formik.handleSubmit}>

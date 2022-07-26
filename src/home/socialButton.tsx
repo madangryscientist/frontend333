@@ -23,8 +23,8 @@ export const SocialButton = ({
       <img
         src={socialNetworkSrc(socialNetworkType)}
         alt={socialNetworkType}
-        width="24px"
-        height="24px"
+        width="30px"
+        height="30px"
       />
       <span className="socialButtonText">{text}</span>
     </a>

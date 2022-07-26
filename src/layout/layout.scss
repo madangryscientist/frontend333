@@ -22,29 +22,38 @@
 .contactUsBox {
   border-radius: 25px;
   display: flex;
-  background-color: black;
+  background-color: #121212d4;
   flex-direction: row;
-  top: 50px;
+  top: 110px;
   position: absolute;
-  left: 20px;
+  left: -5px;
   align-items: flex-start;
+  z-index: 11;
+  font-family: contactUs;
+  color: #f2fdfa;
+  cursor: pointer;
 }
 .contactUsBox:hover {
-  box-shadow: 20px -20px 40px green;
+  box-shadow: 2px 2px 20px #01646d;
+  text-shadow: 2px 2px 5px #01646d;
+  border: 1px solid #6dff1f65;
 }
 .innerContactBox {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font-family: anton;
+  padding-left: 10px;
 }
 .contactUs {
-  height: 100px;
+  height: 120px;
   display: flex;
+  width: 72px;
+  align-content: flex-end;
   align-items: center;
-}
-
-.hide {
-  display: none;
+  flex-direction: column-reverse;
+  justify-content: center;
+  padding: 0px;
+  font-size: 15px;
 }
 h5 {
   transform: rotate(90deg);
