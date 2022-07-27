@@ -1,3 +1,5 @@
+import "./contactUs.scss";
+
 type SocialNetworkType = "instagram" | "email";
 interface ContactUsProps {
   href: string;
@@ -19,7 +21,7 @@ export const ContactUsButton = ({
 }: ContactUsProps) => {
   return (
     <div>
-      <a className="" href={href} target="blank">
+      <a className="contactUsText" href={href} target="blank">
         <div className="contactIcon">
           <img
             src={socialNetworkSrc(socialNetworkType)}

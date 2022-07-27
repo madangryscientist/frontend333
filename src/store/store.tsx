@@ -2,7 +2,6 @@ import { useQuery } from "react-query";
 import { Layout } from "../layout/layout";
 import { StoreItems } from "./storeItems";
 import "./store.scss";
-import { InformationModal } from "./informationModal";
 
 const fetcher = () =>
   fetch("https://localhost:7072/Store").then((res) => res.json());
@@ -19,11 +18,8 @@ const Store = () => {
                 key={item._id}
                 itemColumnNumber={1}
                 heading={item.heading}
-              >
-                <InformationModal>
-                  <div className="innerStoreBox">{item.mainText}</div>
-                </InformationModal>
-              </StoreItems>
+                mainText={item.mainText}
+              />
             </div>
           ))}
         </div>

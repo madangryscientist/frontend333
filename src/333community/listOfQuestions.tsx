@@ -43,14 +43,13 @@ export const ListQuestions = () => {
                       onCount={() => {
                         handleCount();
                       }}
-                    />{" "}
+                    />
                     <p>{element.count}</p>
                   </div>
                 </div>
                 <div className="commentBox">
                   <ListOfComments comments={element.comment} />
                 </div>
-
                 <Comment
                   id={element.id}
                   onComment={() => {

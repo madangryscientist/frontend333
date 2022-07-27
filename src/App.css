@@ -11,8 +11,16 @@ body {
   font-family: titleFont;
   src: url(../public/pdark.ttf);
 }
+@font-face {
+  font-family: contactUs;
+  src: url(../public/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: anton;
+  src: url(../public/Anton.ttf);
+}
 :root {
-  --thickGrayBorder: 2px solid dimgray;
+  --thickGrayBorder: 2px solid #3d3d3d;
   --fontstyle: "DejaVu serif", sans-serif;
   --fontcolor: rgb(224, 221, 221);
 }
