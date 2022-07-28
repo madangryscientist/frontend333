@@ -7,13 +7,19 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [messageClass, setMessageClass] = useState("");
+  const [isChecked, setIsChecked] = useState(false);
+
   const formik = useFormik<ContactDbModel>({
     initialValues: {
       id: 0,
       firstName: "",
       lastName: "",
       email: "",
-      socialMedia: "",
+      instagram: "",
+      twitter: "",
+      soundcloud: "",
+      artist: false,
+      producer: false,
     },
     onSubmit: async (values, { resetForm }) => {
       const result = await fetch(
@@ -50,6 +56,11 @@ const Contact = () => {
       setMessage("");
     }
   }, 2000);
+  const handleOnChange = () => {
+    let checked = isChecked ? true : false;
+    setIsChecked(checked);
+    console.log(isChecked);
+  };
 
   return (
     <Layout>
@@ -98,16 +109,60 @@ const Contact = () => {
             />
           </div>
           <div className="contactLabel">
-            <label htmlFor="socialMedia">Social Media Links</label>
+            <label htmlFor="instagram">Instagram</label>
           </div>
           <div>
             <input
               className="contactInput"
-              id="socialMedia"
-              name="socialMedia"
-              type="socialMedial"
+              id="instagram"
+              name="instagram"
+              type="instagram"
               onChange={formik.handleChange}
-              value={formik.values.socialMedia}
+              value={formik.values.instagram}
+            />
+          </div>
+          <div className="contactLabel">
+            <label htmlFor="twitter">Twitter</label>
+          </div>
+          <div>
+            <input
+              className="contactInput"
+              id="twitter"
+              name="twitter"
+              type="twitter"
+              onChange={formik.handleChange}
+              value={formik.values.twitter}
+            />
+          </div>
+          <div className="contactLabel">
+            <label htmlFor="soundcloud">SoundCloud</label>
+          </div>
+          <div>
+            <input
+              className="contactInput"
+              id="soundcloud"
+              name="soundcloud"
+              type="soundcloud"
+              onChange={formik.handleChange}
+              value={formik.values.soundcloud}
+            />
+          </div>
+          <div className="checkBoxes">
+            <label>Artist</label>
+            <input
+              type="checkbox"
+              id="artistBox"
+              name="artistBox"
+              value="artist"
+              onChange={() => handleOnChange()}
+            />
+            <label>Producer</label>
+            <input
+              type="checkbox"
+              id="producerBox"
+              name="producerBox"
+              onChange={() => handleOnChange()}
+              value="producer"
             />
           </div>
           <div className="submitButton">
