@@ -16,6 +16,7 @@ export const Layout = ({ children, showAnimation = false }: LogoProps) => {
     setShow(!show);
     console.log(toggleText);
   }
+
   return (
     <div className="outer">
       <div className="container">
@@ -42,7 +43,9 @@ export const Layout = ({ children, showAnimation = false }: LogoProps) => {
           </div>
           <div className="contactUs" onClick={() => toggleText()}>
             <h5>Contact Us</h5>
-            <span className={show ? "close" : "hide"}>&times;</span>
+            <button type="button" className={show ? "closeButton" : "hide"}>
+              &times;
+            </button>
           </div>
         </div>
         <main>{children}</main>

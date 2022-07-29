@@ -1,11 +1,14 @@
 .outerStoreBox {
-  border: 1px solid white;
+  border: 1px solid #6dff1fa2;
   width: 400px;
   margin-bottom: 10px;
-  box-shadow: 0px 0px 20px green;
+  box-shadow: 0px 0px 20px #01646d;
   border-radius: 10px;
 }
-
+.outerStore {
+  width: 800px;
+  height: 1000px;
+}
 .storeItems {
   display: flex;
   flex-direction: column;
@@ -16,6 +19,7 @@
   display: flex;
   justify-content: center;
   height: 30px;
+  align-items: center;
 }
 
 .modal {
@@ -34,7 +38,7 @@
 
 /* Modal Content */
 .modalContent {
-  background-color: #363636;
+  background-color: #121212;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
@@ -44,7 +48,7 @@
   flex-direction: column-reverse;
   align-items: center;
   border-radius: 5px;
-  border-color: teal;
+  border-color: #01646d;
 }
 
 /* The Close Button */
@@ -60,4 +64,39 @@
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+.trackSlides {
+  border: 2px solid white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.react-3d-carousel .slider-container .slider-left div {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  margin-top: -20px;
+  color: #ffffff;
+  transform: translateY(-50%);
+  padding: 10px 10px;
+  // border-top: 2px solid #fdc84b;
+  // border-right: 2px solid #fdc84b;
+  // border-bottom: 2px solid #fdc84b;
+  // border-left: 2px solid #fdc84b;
+}
+.outerStore .react-3d-carousel .slider-container .slider-right div {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  margin-top: -20px;
+  color: #ffffff;
+  transform: translateY(-50%);
+  padding: 10px 10px;
+  background-color: #01646d;
+
+  // border-top: 2px solid #fdc84b;
+  // border-right: 2px solid #fdc84b;
+  // border-bottom: 2px solid #fdc84b;
+  // border-left: 2px solid #fdc84b;
 }

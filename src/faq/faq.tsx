@@ -11,15 +11,27 @@ const Faq = () => {
   if (!data) return <Loading></Loading>;
   return (
     <Layout>
-      <h2>FAQ</h2>
-      {data.map((element) => {
-        return (
-          <div key={element.id}>
-            <h2>{element.question}</h2>
-            <p>{element.answer}</p>
-          </div>
-        );
-      })}
+      <div>
+        <h2>FAQ</h2>
+        <div>
+          {data.map((element) => {
+            return (
+              <div key={element.id}>
+                <h2>{element.question}</h2>
+                <p>{element.answer}</p>
+              </div>
+            );
+          })}
+        </div>
+        <div>
+          <textarea
+            className="faqQuestions"
+            id="questions"
+            name="questions"
+            rows={4}
+          />
+        </div>
+      </div>
     </Layout>
   );
 };

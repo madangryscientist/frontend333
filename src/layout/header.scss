@@ -26,7 +26,7 @@
     circle,
     rgba(10, 11, 11, 1) 0%,
     rgba(1, 100, 109, 0.598) 10%,
-    rgba(0, 0, 0, 0) 30%
+    rgba(0, 0, 0, 0) 25%
   );
   width: 100%;
   height: 200x;
@@ -58,6 +58,7 @@
   flex-direction: column;
   padding-top: 70px;
   width: 100%;
+  padding-bottom: 20px;
 }
 .logo {
   position: absolute !important;
@@ -97,8 +98,9 @@
 
 .menu .active {
   color: color(display-p3 0.242 0.253 0.25 / 1);
-  box-shadow: 0px 0px 20px #6dff1f;
+  box-shadow: -2px -2px 20px #6dff1f;
   border: 1px solid #01646d;
+  text-shadow: 1px 1px 10px #6dff1f;
 }
 .siteTitle {
   font-family: titleFont;
