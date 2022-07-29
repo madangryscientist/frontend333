@@ -32,15 +32,22 @@ const Contact = () => {
           body: JSON.stringify(values),
         }
       );
+
       const response = await result.json();
       resetForm();
       setMessage("Saved");
       setSubmitted(true);
       setMessageClass("Success");
+      setTimeout(() => {
+        console.log("effect", formik.values, submitted);
+
+        setMessageClass("");
+        setSubmitted(false);
+        setMessage("");
+      }, 2000);
     },
 
     validate: (values) => {
-      // console.log(values);
       const errors = {} as FormikErrors<ContactDbModel>;
       if (values.firstName.length == 0) {
         errors.firstName = "First Name is Required";
@@ -48,19 +55,6 @@ const Contact = () => {
       return errors;
     },
   });
-  setTimeout(() => {
-    console.log("effect", formik.values, submitted);
-    if (submitted) {
-      setMessageClass("");
-      setSubmitted(false);
-      setMessage("");
-    }
-  }, 2000);
-  const handleOnChange = () => {
-    let checked = isChecked ? true : false;
-    setIsChecked(checked);
-    console.log(isChecked);
-  };
 
   return (
     <Layout>
@@ -90,7 +84,7 @@ const Contact = () => {
               className="contactInput"
               id="lastName"
               name="lastName"
-              type="text"
+              type="lastName"
               onChange={formik.handleChange}
               value={formik.values.lastName}
             />
@@ -116,7 +110,7 @@ const Contact = () => {
               className="contactInput"
               id="instagram"
               name="instagram"
-              type="instagram"
+              type="url"
               onChange={formik.handleChange}
               value={formik.values.instagram}
             />
@@ -129,7 +123,7 @@ const Contact = () => {
               className="contactInput"
               id="twitter"
               name="twitter"
-              type="twitter"
+              type="url"
               onChange={formik.handleChange}
               value={formik.values.twitter}
             />
@@ -142,7 +136,7 @@ const Contact = () => {
               className="contactInput"
               id="soundcloud"
               name="soundcloud"
-              type="soundcloud"
+              type="url"
               onChange={formik.handleChange}
               value={formik.values.soundcloud}
             />
@@ -154,14 +148,18 @@ const Contact = () => {
               id="artistBox"
               name="artistBox"
               value="artist"
-              onChange={() => handleOnChange()}
+              onChange={() => {
+                formik.setFieldValue("artist", !formik.values.artist);
+              }}
             />
             <label>Producer</label>
             <input
               type="checkbox"
               id="producerBox"
               name="producerBox"
-              onChange={() => handleOnChange()}
+              onChange={() => {
+                formik.setFieldValue("producer", !formik.values.producer);
+              }}
               value="producer"
             />
           </div>
