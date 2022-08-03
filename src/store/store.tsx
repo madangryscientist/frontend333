@@ -5,29 +5,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./swiperStore.scss";
-
 import { Pagination } from "swiper";
 import { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
+import TrackOne from "./trackOne";
+
 const fetcher = () =>
   fetch("https://localhost:7072/Store").then((res) => res.json());
 const Store = () => {
-  const audioRef = useRef<HTMLAudioElement>();
-  const [playing, setPlaying] = useState(true);
   const { data } = useQuery("https://localhost:7072/Store", fetcher);
   console.log("store", data);
-
-  const handlePlay = () => {
-    console.log("pl");
-    let oppisite = !playing;
-    setPlaying(oppisite);
-    if (!oppisite) {
-      audioRef.current?.play();
-    } else {
-      audioRef.current?.pause();
-    }
-  };
 
   const pagination = {
     clickable: true,
@@ -46,77 +34,10 @@ const Store = () => {
             className="mySwiper"
           >
             <SwiperSlide className="storeSwiper">
-              <div className="trackSlides">
-                <h3>Track 3 example</h3>
-                <h4>BPM 140</h4>
-                <p>A MINOR</p>
-                <button type="button" className="fa-solid fa-play">
-                  Purchase Options
-                </button>
-                <br />
-                <button
-                  type="button"
-                  onClick={() => {
-                    handlePlay();
-                  }}
-                  className="playPauseButton"
-                >
-                  <FontAwesomeIcon icon={!playing ? faPause : faPlay} />
-                </button>
-
-                <audio ref={audioRef as any}>
-                  <source src="./gone.mp3" type="audio/mpeg" />
-                </audio>
-              </div>
+              <TrackOne />
             </SwiperSlide>
-            <SwiperSlide className="storeSwiper">
-              <div className="trackSlides">
-                <h3>Track 3 example</h3>
-                <h4>BPM 140</h4>
-                <p>A MINOR</p>
-                <button type="button" className="fa-solid fa-play">
-                  Purchase Options
-                </button>
-                <br />
-                <button
-                  type="button"
-                  onClick={() => {
-                    handlePlay();
-                  }}
-                  className="playPauseButton"
-                >
-                  <FontAwesomeIcon icon={!playing ? faPause : faPlay} />
-                </button>
-
-                <audio ref={audioRef as any}>
-                  <source src="./gone.mp3" type="audio/mpeg" />
-                </audio>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="storeSwiper">
-              <div className="trackSlides">
-                <h3>Track 3 example</h3>
-                <h4>BPM 140</h4>
-                <p>A MINOR</p>
-                <button type="button" className="fa-solid fa-play">
-                  Purchase Options
-                </button>
-                <br />
-                <button
-                  type="button"
-                  onClick={() => {
-                    handlePlay();
-                  }}
-                  className="playPauseButton"
-                >
-                  <FontAwesomeIcon icon={!playing ? faPause : faPlay} />
-                </button>
-
-                <audio ref={audioRef as any}>
-                  <source src="./gone.mp3" type="audio/mpeg" />
-                </audio>
-              </div>
-            </SwiperSlide>
+            <SwiperSlide className="storeSwiper"></SwiperSlide>
+            <SwiperSlide className="storeSwiper"></SwiperSlide>
             <SwiperSlide>Slide 4</SwiperSlide>
             <SwiperSlide>Slide 5</SwiperSlide>
             <SwiperSlide>Slide 6</SwiperSlide>
