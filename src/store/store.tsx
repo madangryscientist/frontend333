@@ -1,67 +1,50 @@
 import { useQuery } from "react-query";
 import { Layout } from "../layout/layout";
-import { StoreItems } from "./storeItems";
 import "./store.scss";
-import { Carousel } from "3d-react-carousal";
-import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "./swiperStore.scss";
+import { Pagination } from "swiper";
+
+import TrackOne from "./trackOne";
+
 const fetcher = () =>
-  fetch("https://localhost:7072/Store").then((res) => res.json());
+  fetch("https://localhost:7072/Store/TracksInput").then((res) => res.json());
 const Store = () => {
-  const [pause, setPause] = useState(true);
-  const { data } = useQuery("https://localhost:7072/Store", fetcher);
+  const { data } = useQuery("Tracks", fetcher);
   console.log("store", data);
 
-  const callback = function (index) {
-    console.log("callback", index);
-  };
-
-  const handlePlay = () => {
-    console.log("pl");
-    let oppisite = pause ? false : true;
-    setPause(oppisite);
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
   };
 
   return (
     <Layout>
       <div className="outerStore">
-        <Carousel
-          slides={[
-            <div className="trackSlides">
-              <h3>Track 3 example</h3>
-              <h4>BPM 140</h4>
-              <p>A MINOR</p>
-              <button type="button" className="fa-solid fa-play">
-                Purchase Options
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  handlePlay();
-                }}
-                className={pause ? "pause" : "fa-solid fa-play"}
-              >
-                Play
-              </button>
-            </div>,
-            <div className="trackSlides">
-              <h3>Track 3 example</h3>
-              <h4>BPM 140</h4>
-              <p>A MINOR</p>
-              <button type="button"> Purchase Options</button>
-              <button type="button">Play</button>
-            </div>,
-            <div className="trackSlides">
-              <h3>Track 3 example</h3>
-              <h4>BPM 140</h4>
-              <p>A MINOR</p>
-              <button type="button"> Purchase Options</button>
-              <button type="button">Play</button>
-            </div>,
-
-            ,
-          ]}
-          onSlideChange={callback}
-        />
+        <div className="innerStore">
+          <Swiper
+            pagination={pagination}
+            modules={[Pagination]}
+            className="mySwiper"
+          >
+            {data?.map((element) => {
+              return (
+                <SwiperSlide className="storeSwiper">
+                  <TrackOne
+                    trackName={element.trackName}
+                    bpm={element.bpm}
+                    tune={element.tune}
+                    songUrl={element.songUrl}
+                  />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
       </div>
     </Layout>
   );

@@ -22,81 +22,19 @@
   align-items: center;
 }
 
-.modal {
-  position: fixed; /* Stay in place */
-  z-index: 12; /* Sit on top */
-  padding-top: 50px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: black;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Modal Content */
-.modalContent {
-  background-color: #121212;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 600px;
+.innerStore {
   display: flex;
-  justify-content: space-between;
-  flex-direction: column-reverse;
-  align-items: center;
-  border-radius: 5px;
-  border-color: #01646d;
 }
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+.playPauseButton {
+  margin-top: 10px;
 }
 .trackSlides {
-  border: 2px solid white;
-  padding: 10px;
+  border: 1px solid #01646d;
+  padding-bottom: 10px;
+  width: 300px;
+  height: 300px;
   display: flex;
   flex-direction: column;
-}
-
-.react-3d-carousel .slider-container .slider-left div {
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  margin-top: -20px;
-  color: #ffffff;
-  transform: translateY(-50%);
-  padding: 10px 10px;
-  // border-top: 2px solid #fdc84b;
-  // border-right: 2px solid #fdc84b;
-  // border-bottom: 2px solid #fdc84b;
-  // border-left: 2px solid #fdc84b;
-}
-.outerStore .react-3d-carousel .slider-container .slider-right div {
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  margin-top: -20px;
-  color: #ffffff;
-  transform: translateY(-50%);
-  padding: 10px 10px;
-  background-color: #01646d;
-
-  // border-top: 2px solid #fdc84b;
-  // border-right: 2px solid #fdc84b;
-  // border-bottom: 2px solid #fdc84b;
-  // border-left: 2px solid #fdc84b;
+  align-items: center;
+  justify-content: center;
 }
