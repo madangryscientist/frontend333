@@ -6,15 +6,19 @@ import "./swiperStore.scss";
 
 import { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPause,
-  faPlay,
-  faXmark,
-  faXmarkSquare,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPause, faPlay, faXmark } from "@fortawesome/free-solid-svg-icons";
 import "./card.scss";
 
-const TrackOne = () => {
+interface TrackProps {
+  trackName: string;
+  bpm: number;
+  tune: string;
+  songUrl: string;
+}
+const fetcher = () =>
+  fetch("https://localhost:7072/Tracks").then((res) => res.json());
+
+const TrackOne = ({ trackName, bpm, tune, songUrl }: TrackProps) => {
   const audioRef = useRef<HTMLAudioElement>();
   const [playing, setPlaying] = useState(true);
   const [flip, setFlip] = useState(false);
@@ -36,9 +40,9 @@ const TrackOne = () => {
     <div className={flip ? "flip-card turn" : "flip-card"}>
       <div className="flip-card-inner">
         <div className="flip-card-front">
-          <h3>Track 3 example</h3>
-          <h4>BPM 140</h4>
-          <p>A MINOR</p>
+          <h3>{trackName}</h3>
+          <h4>{bpm}</h4>
+          <p>{tune}</p>
           <button
             type="button"
             className="options"
@@ -60,7 +64,8 @@ const TrackOne = () => {
           </button>
 
           <audio ref={audioRef as any}>
-            <source src="./gone.mp3" type="audio/mpeg" />
+            <source src={songUrl} type="audio/mpeg" />
+            {songUrl}
           </audio>
         </div>
         <div

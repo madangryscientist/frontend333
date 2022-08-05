@@ -1,6 +1,6 @@
 .flip-card {
   background-color: transparent;
-  width: 275px;
+  width: 260px;
   height: 350px;
   perspective: 1000px;
 }
@@ -12,8 +12,8 @@
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0px 0px 20px #6dff1faf;
-  border-radius: 5px;
+  box-shadow: 0px 0px 20px #6dff1f8f inset;
+  border-radius: 20px;
 }
 
 .turn .flip-card-inner {
@@ -34,7 +34,6 @@
 }
 
 .flip-card-front {
-  background-color: black;
   color: white;
 }
 
@@ -42,4 +41,12 @@
   background-color: black;
   color: white;
   transform: rotateY(180deg);
+}
+.options {
+  background-color: black;
+  border: 1px solid green;
+  color: white;
+  height: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #6dff1f8f inset;
 }
