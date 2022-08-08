@@ -84,7 +84,7 @@ const Contact = () => {
               className="contactInput"
               id="lastName"
               name="lastName"
-              type="lastName"
+              type="text"
               onChange={formik.handleChange}
               value={formik.values.lastName}
             />
