@@ -12,7 +12,7 @@ export const UsefulButton = ({ id, onCount }: CommentFormProps) => {
       method: "POST",
       body: JSON.stringify({ id }),
     });
-    const response = await result.json();
+    await result.json();
     onCount();
   }
   return (

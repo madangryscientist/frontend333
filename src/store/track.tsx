@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "./swiperStore.scss";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPause, faPlay, faXmark } from "@fortawesome/free-solid-svg-icons";
 import "./card.scss";

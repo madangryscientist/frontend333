@@ -5,10 +5,6 @@ import { useQuery } from "react-query";
 import { CommunityDbModel } from "../models/CommunityModel";
 import "./comment.scss";
 import { Loading } from "../loading/loading";
-interface CommentForm {
-  comment: string;
-  _id: string;
-}
 
 const fetcher = () =>
   fetch("https://localhost:7072/Community").then((res) => res.json());

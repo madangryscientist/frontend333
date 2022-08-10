@@ -11,28 +11,30 @@ export const Header = ({ showAnimation }: LogoProps) => {
     <div className="heading">
       <div className="menu">
         <a
-          className={router.pathname == "/" ? "active menuBar" : "menuBar"}
+          className={router.pathname === "/" ? "active menuBar" : "menuBar"}
           href="/"
         >
           HOME
         </a>
         <a
           className={
-            router.pathname == "/community" ? "active menuBar" : "menuBar"
+            router.pathname === "/community" ? "active menuBar" : "menuBar"
           }
           href="/community"
         >
           333COMMUNITY
         </a>
         <a
-          className={router.pathname == "/music" ? "active menuBar" : "menuBar"}
+          className={
+            router.pathname === "/music" ? "active menuBar" : "menuBar"
+          }
           href="/music"
         >
           MUSIC
         </a>
         <a
           className={
-            router.pathname == "/store" ? "active menuBar " : "menuBar"
+            router.pathname === "/store" ? "active menuBar " : "menuBar"
           }
           href="/store"
         >
@@ -41,14 +43,14 @@ export const Header = ({ showAnimation }: LogoProps) => {
 
         <a
           className={
-            router.pathname == "/contact" ? "active menuBar" : "menuBar"
+            router.pathname === "/contact" ? "active menuBar" : "menuBar"
           }
           href="/contact "
         >
           SUBMISSOINS
         </a>
         <a
-          className={router.pathname == "/faq" ? "active menuBar" : "menuBar"}
+          className={router.pathname === "/faq" ? "active menuBar" : "menuBar"}
           href="/faq"
         >
           FAQ

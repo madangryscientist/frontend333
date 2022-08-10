@@ -24,7 +24,7 @@ export const Comment = ({ id, onComment }: CommentFormProps) => {
         body: JSON.stringify(values),
       });
 
-      const response = await result.json();
+      await result.json();
       resetForm();
       onComment();
     },

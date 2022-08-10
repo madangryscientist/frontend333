@@ -1,5 +1,5 @@
 import { FormikErrors, useFormik } from "formik";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Layout } from "../layout/layout";
 import { ListQuestions } from "./listOfQuestions";
 import "./community.scss";
@@ -8,7 +8,6 @@ interface CommunicationForm {
 }
 const Community = () => {
   const [message, setMessage] = useState("");
-  const [submitted, setSubmitted] = useState(false);
   const [messageClass, setMessageClass] = useState("");
   const formik = useFormik<CommunicationForm>({
     initialValues: {
@@ -26,7 +25,6 @@ const Community = () => {
       const response = await result.json();
       resetForm();
       setMessage(response.message);
-      setSubmitted(true);
       setMessageClass("Success");
     },
 
@@ -39,13 +37,7 @@ const Community = () => {
       return errors;
     },
   });
-  // useEffect(() => {
-  //   console.log("effect", formik.values, submitted);
-  //   if (submitted) {
-  //     setMessageClass("");
-  //     setSubmitted(false);
-  //   }
-  // }, [formik.values]);
+
   return (
     <Layout>
       <ListQuestions />

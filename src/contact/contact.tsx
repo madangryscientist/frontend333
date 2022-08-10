@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { FormikErrors, useFormik } from "formik";
 import { Layout } from "../layout/layout";
 import { ContactDbModel } from "../models/ContactModel";
@@ -7,7 +7,6 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [messageClass, setMessageClass] = useState("");
-  const [isChecked, setIsChecked] = useState(false);
 
   const formik = useFormik<ContactDbModel>({
     initialValues: {
@@ -33,7 +32,7 @@ const Contact = () => {
         }
       );
 
-      const response = await result.json();
+      await result.json();
       resetForm();
       setMessage("Saved");
       setSubmitted(true);
@@ -49,7 +48,7 @@ const Contact = () => {
 
     validate: (values) => {
       const errors = {} as FormikErrors<ContactDbModel>;
-      if (values.firstName.length == 0) {
+      if (values.firstName.length === 0) {
         errors.firstName = "First Name is Required";
       }
       return errors;

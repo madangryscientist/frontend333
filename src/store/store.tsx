@@ -1,7 +1,7 @@
 import { useQuery } from "react-query";
 import { Layout } from "../layout/layout";
 import "./store.scss";
-import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./swiperStore.scss";
