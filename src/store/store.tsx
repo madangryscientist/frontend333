@@ -10,8 +10,7 @@ import "swiper/css/navigation";
 import Track from "./track";
 import "swiper/css/effect-coverflow";
 import { useRef, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
+import { Helmet } from "react-helmet";
 
 const fetcher = () =>
   fetch("https://localhost:7072/Store/TracksInput").then((res) => res.json());
@@ -50,6 +49,18 @@ const Store = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Store</title>
+        <link rel="canonical" href="/store" />
+        <meta
+          name="description"
+          content="3rdHarmonicRecords store page to view tracks availible for purchase"
+        />
+        <meta
+          name="keywords"
+          content="3rdHarmonicRecords, store, music, hiphop"
+        />
+      </Helmet>
       <div className="outerStore">
         <div className="innerStore">
           <audio ref={audioRef as any}>
