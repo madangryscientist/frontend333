@@ -8,6 +8,7 @@ import { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPause, faPlay, faXmark } from "@fortawesome/free-solid-svg-icons";
 import "./card.scss";
+import { useSwiperSlide } from "swiper/react";
 
 interface TrackProps {
   trackName: string;
@@ -15,19 +16,11 @@ interface TrackProps {
   tune: string;
   playing: boolean;
   onTogglePlay: () => void;
-  isActive: boolean;
 }
 
-const Track = ({
-  trackName,
-  bpm,
-  tune,
-  playing,
-  onTogglePlay,
-  isActive,
-}: TrackProps) => {
+const Track = ({ trackName, bpm, tune, playing, onTogglePlay }: TrackProps) => {
   const [flip, setFlip] = useState(false);
-
+  const swiperSlide = useSwiperSlide();
   const handleFlip = () => {
     setFlip(!flip);
   };
@@ -52,7 +45,7 @@ const Track = ({
             PURCHASE OPTIONS
           </button>
           <br />
-          {isActive && (
+          {swiperSlide.isActive && (
             <button
               type="button"
               onClick={() => {

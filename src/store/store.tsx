@@ -93,16 +93,13 @@ const Store = () => {
             {data?.map((element) => {
               return (
                 <SwiperSlide className="storeSwiper" key={element.id}>
-                  {({ isActive }) => (
-                    <Track
-                      trackName={element.trackName}
-                      bpm={element.bpm}
-                      tune={element.tune}
-                      playing={playing}
-                      onTogglePlay={() => handlePlay()}
-                      isActive={isActive}
-                    />
-                  )}
+                  <Track
+                    trackName={element.trackName}
+                    bpm={element.bpm}
+                    tune={element.tune}
+                    playing={playing}
+                    onTogglePlay={() => handlePlay()}
+                  />
                 </SwiperSlide>
               );
             })}
