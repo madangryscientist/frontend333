@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/frontend333/static/css/main.26e2b93f.css",
+    "main.js": "/frontend333/static/js/main.be23b2a8.js",
+    "static/js/787.9e5a9ace.chunk.js": "/frontend333/static/js/787.9e5a9ace.chunk.js",
+    "static/media/OpenSans-Regular.ttf": "/frontend333/static/media/OpenSans-Regular.17e98b9e5586529b13cc.ttf",
+    "static/media/Anton.ttf": "/frontend333/static/media/Anton.0f5c019871c857ba386d.ttf",
+    "static/media/pdark.ttf": "/frontend333/static/media/pdark.7da36e4a269ced892549.ttf",
+    "index.html": "/frontend333/index.html",
+    "main.26e2b93f.css.map": "/frontend333/static/css/main.26e2b93f.css.map",
+    "main.be23b2a8.js.map": "/frontend333/static/js/main.be23b2a8.js.map",
+    "787.9e5a9ace.chunk.js.map": "/frontend333/static/js/787.9e5a9ace.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.26e2b93f.css",
+    "static/js/main.be23b2a8.js"
+  ]
+}
