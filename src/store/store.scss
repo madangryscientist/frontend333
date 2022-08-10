@@ -7,7 +7,7 @@
 }
 .outerStore {
   width: 800px;
-  height: 1000px;
+  height: 500px;
 }
 .storeItems {
   display: flex;
@@ -25,9 +25,7 @@
 .innerStore {
   display: flex;
 }
-.playPauseButton {
-  margin-top: 10px;
-}
+
 .trackSlides {
   border: 1px solid #01646d;
   padding-bottom: 10px;
@@ -37,4 +35,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.swiper-button-next::after {
+  color: #01646d;
+  padding-left: 25px;
+}
+.swiper-button-prev::after {
+  color: #01646d;
+  padding-right: 25px;
 }
