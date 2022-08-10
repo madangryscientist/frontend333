@@ -5,6 +5,9 @@ import "./home.css";
 export function HomePage() {
   return (
     <div>
+      <head>
+        <title>3rdHarmonicRecords</title>
+      </head>
       <Layout showAnimation={true}>
         <div className="row flex-m-col flex-d-row">
           <div className="col column1">

@@ -13,27 +13,28 @@ interface TrackProps {
   trackName: string;
   bpm: number;
   tune: string;
-  songUrl: string;
+  playing: boolean;
+  onTogglePlay: () => void;
+  isActive: boolean;
 }
 
-const Track = ({ trackName, bpm, tune, songUrl }: TrackProps) => {
-  const audioRef = useRef<HTMLAudioElement>();
-  const [playing, setPlaying] = useState(true);
+const Track = ({
+  trackName,
+  bpm,
+  tune,
+  playing,
+  onTogglePlay,
+  isActive,
+}: TrackProps) => {
   const [flip, setFlip] = useState(false);
-  const handlePlay = () => {
-    console.log("pl");
-    let oppisite = !playing;
-    setPlaying(oppisite);
-    if (!oppisite) {
-      audioRef.current?.play();
-    } else {
-      audioRef.current?.pause();
-    }
-  };
+
   const handleFlip = () => {
     setFlip(!flip);
   };
-  console.log(flip, "flipped");
+  const handleClick = () => {
+    onTogglePlay();
+  };
+  // console.log(flip, "flipped");
   return (
     <div className={flip ? "flip-card turn" : "flip-card"}>
       <div className="flip-card-inner">
@@ -51,20 +52,17 @@ const Track = ({ trackName, bpm, tune, songUrl }: TrackProps) => {
             PURCHASE OPTIONS
           </button>
           <br />
-          <button
-            type="button"
-            onClick={() => {
-              handlePlay();
-            }}
-            className="playPauseButton"
-          >
-            <FontAwesomeIcon icon={!playing ? faPause : faPlay} />
-          </button>
-
-          <audio ref={audioRef as any}>
-            <source src={songUrl} type="audio/mpeg" />
-            {songUrl}
-          </audio>
+          {isActive && (
+            <button
+              type="button"
+              onClick={() => {
+                handleClick();
+              }}
+              className="playPauseButton"
+            >
+              <FontAwesomeIcon icon={playing ? faPause : faPlay} />
+            </button>
+          )}
         </div>
         <div
           className="flip-card-back"
