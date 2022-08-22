@@ -1,5 +1,5 @@
 interface CommentFormProps {
-  id: number;
+  id: string;
   onCount: () => void;
 }
 

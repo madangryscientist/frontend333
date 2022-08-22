@@ -1,5 +1,5 @@
 export interface FaqDbModel {
-  id: number;
+  id?: string;
   question: string;
   answer: string;
   active: boolean;

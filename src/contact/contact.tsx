@@ -10,7 +10,6 @@ const Contact = () => {
 
   const formik = useFormik<ContactDbModel>({
     initialValues: {
-      id: 0,
       firstName: "",
       lastName: "",
       email: "",

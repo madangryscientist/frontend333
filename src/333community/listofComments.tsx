@@ -11,7 +11,7 @@ export const ListOfComments = ({ comments }: ListOfCommentsProps) => {
       <div className="commentHead">Comments</div>
       {comments?.map((comment) => {
         return (
-          <div className="commentsList" key={comment.id}>
+          <div className="commentsList" key={comment.comment??""}>
             <p>{comment.comment} </p>
           </div>
         );

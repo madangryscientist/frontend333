@@ -35,7 +35,7 @@ export const ListQuestions = () => {
                   <h4 className="commentH4">{element.question} </h4>
                   <div className="useful">
                     <UsefulButton
-                      id={element.id}
+                      id={element.id??""}
                       onCount={() => {
                         handleCount();
                       }}
@@ -47,7 +47,7 @@ export const ListQuestions = () => {
                   <ListOfComments comments={element.comment} />
                 </div>
                 <Comment
-                  id={element.id}
+                  id={element.id??""}
                   onComment={() => {
                     handleComment();
                   }}

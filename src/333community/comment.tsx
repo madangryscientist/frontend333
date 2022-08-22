@@ -1,12 +1,12 @@
 import { FormikErrors, useFormik } from "formik";
 import "./comment.scss";
 interface CommentFormProps {
-  id: number;
+  id: string;
   onComment: () => void;
 }
 
 interface NewComment {
-  communityId: number;
+  communityId: string;
   comment: string;
 }
 export const Comment = ({ id, onComment }: CommentFormProps) => {
