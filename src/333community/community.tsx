@@ -14,7 +14,7 @@ const Community = () => {
       question: "",
     },
     onSubmit: async (values, { resetForm }) => {
-      const result = await fetch("https://localhost:7072/Community/Community", {
+      const result = await fetch("https://backend333.azurewebsites.net/Community/Community", {
         headers: {
           "Content-Type": "application/json",
         },

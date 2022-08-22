@@ -4,7 +4,7 @@ import { Loading } from "../loading/loading";
 import { FaqDbModel } from "../models/FaqModel";
 
 const fetcher = () =>
-  fetch("https://localhost:7072/Faq").then((res) => res.json());
+  fetch("https://backend333.azurewebsites.net/Faq").then((res) => res.json());
 
 const Faq = () => {
   const { data, isLoading } = useQuery<FaqDbModel[]>("/api/faq", fetcher);

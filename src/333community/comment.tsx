@@ -16,7 +16,7 @@ export const Comment = ({ id, onComment }: CommentFormProps) => {
       communityId: id,
     },
     onSubmit: async (values, { resetForm }) => {
-      const result = await fetch("https://localhost:7072/Community/Comment", {
+      const result = await fetch("https://backend333.azurewebsites.net/Community/Comment", {
         headers: {
           "Content-Type": "application/json",
         },

@@ -7,7 +7,7 @@ import "./comment.scss";
 import { Loading } from "../loading/loading";
 
 const fetcher = () =>
-  fetch("https://localhost:7072/Community").then((res) => res.json());
+  fetch("https://backend333.azurewebsites.net/Community").then((res) => res.json());
 
 export const ListQuestions = () => {
   const { data, isLoading, refetch } = useQuery<CommunityDbModel[]>(

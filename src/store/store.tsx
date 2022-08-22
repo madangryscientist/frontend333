@@ -13,7 +13,7 @@ import { useRef, useState } from "react";
 import { Helmet } from "react-helmet";
 
 const fetcher = () =>
-  fetch("https://localhost:7072/Store/TracksInput").then((res) => res.json());
+  fetch("https://backend333.azurewebsites.net/Store/TracksInput").then((res) => res.json());
 const Store = () => {
   const audioRef = useRef<HTMLAudioElement>();
   const { data } = useQuery("Tracks", fetcher);

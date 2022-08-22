@@ -5,7 +5,7 @@ interface CommentFormProps {
 
 export const UsefulButton = ({ id, onCount }: CommentFormProps) => {
   async function count() {
-    const result = await fetch("https://localhost:7072/Community/Count", {
+    const result = await fetch("https://backend333.azurewebsites.net/Community/Count", {
       headers: {
         "Content-Type": "application/json",
       },

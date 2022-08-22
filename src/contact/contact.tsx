@@ -22,7 +22,7 @@ const Contact = () => {
     },
     onSubmit: async (values, { resetForm }) => {
       const result = await fetch(
-        "https://localhost:7072/ContactUs/ContactUsInput",
+        "https://backend333.azurewebsites.net/ContactUs/ContactUsInput",
         {
           headers: {
             "Content-Type": "application/json",
