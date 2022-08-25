@@ -9,9 +9,9 @@ export const ListOfComments = ({ comments }: ListOfCommentsProps) => {
   return (
     <div className="scroll">
       <div className="commentHead">Comments</div>
-      {comments?.map((comment) => {
+      {comments?.map((comment,index) => {
         return (
-          <div className="commentsList" key={comment.comment??""}>
+          <div className="commentsList" key={index}>
             <p>{comment.comment} </p>
           </div>
         );
