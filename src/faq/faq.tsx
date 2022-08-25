@@ -18,7 +18,7 @@ const Faq = () => {
 
   const formik = useFormik<FaqDbModel>({
     initialValues: {
-      id: 0,
+     
       question: "",
       answer: "",
       active: false,
