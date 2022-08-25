@@ -55,6 +55,14 @@ export const Header = ({ showAnimation }: LogoProps) => {
         >
           FAQ
         </a>
+        <a
+          className={
+            router.pathname === "/aboutUs" ? "active menuBar" : "menuBar"
+          }
+          href="/aboutUs"
+        >
+          ABOUT US
+        </a>
       </div>
       <div className={showAnimation ? "bg bgAnimate" : "bg"}>
         <div className="logo-centered">
