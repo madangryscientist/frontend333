@@ -1,5 +1,5 @@
 { 
-  "homepage": "https://ashy-island-0b963e203.1.azurestaticapps.net/",
+  
   "name": "frontend333",
   "version": "0.1.0",
   "private": true,
@@ -34,7 +34,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "npm run gh-pages build"
+    "deploy": "yarn run gh-pages build"
   },
   "eslintConfig": {
     "extends": [
