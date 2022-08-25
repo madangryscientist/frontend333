@@ -54,11 +54,11 @@ const Store = () => {
         <link rel="canonical" href="/store" />
         <meta
           name="description"
-          content="3rdHarmonicRecords store page to view tracks availible for purchase"
+          content="3rdHarmonicRecords store page to view beats availible for purchase"
         />
         <meta
           name="keywords"
-          content="3rdHarmonicRecords, store, music, hiphop"
+          content="3rdHarmonicRecords, store, music, hiphop, beats, music production, purchase, instrumental, mp3, wav, sound, lease, buy, listen, play, pause, album, single, e.p, mixtape, remix, mixing, mastering, production, artwork, videos, music videos, recording, producing "
         />
       </Helmet>
       <div className="outerStore">

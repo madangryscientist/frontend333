@@ -7,6 +7,8 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import Faq from "./faq/faq";
 import Contact from "./contact/contact";
 import Store from "./store/store";
+import { Music } from "./music/music";
+import { AboutUS } from "./aboutUs/aboutUs";
 
 function App() {
   const queryClient = new QueryClient();
@@ -19,6 +21,8 @@ function App() {
             <Route path="/faq" element={<Faq />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/store" element={<Store />} />
+            <Route path="/music" element={<Music />} />
+            <Route path="/aboutUs" element={<AboutUS />} />
             <Route path="/" element={<HomePage />} />
           </Routes>
         </BrowserRouter>

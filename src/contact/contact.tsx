@@ -3,6 +3,8 @@ import { FormikErrors, useFormik } from "formik";
 import { Layout } from "../layout/layout";
 import { ContactDbModel } from "../models/ContactModel";
 import "./contact.scss";
+import { Helmet } from "react-helmet";
+
 const Contact = () => {
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -56,6 +58,18 @@ const Contact = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Contact</title>
+        <link rel="canonical" href="/contact" />
+        <meta
+          name="description"
+          content="3rdHarmonicRecords contact page is for submitting relavant content"
+        />
+        <meta
+          name="keywords"
+          content="3rdHarmonicRecords, contact, artist, producer, submissions, release music, contact information, spotify, itunes, soundcloud, youtube, apple music, tidal, email "
+        />
+      </Helmet>
       <form onSubmit={formik.handleSubmit}>
         <div className="contactBox">
           <div>
