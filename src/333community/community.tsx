@@ -1,13 +1,13 @@
-import { FormikErrors, useFormik } from "formik";
-import { useState } from "react";
+// import { FormikErrors, useFormik } from "formik";
+// import { useState } from "react";
 import { Layout } from "../layout/layout";
-import { ListQuestions } from "./listOfQuestions";
+// import { ListQuestions } from "./listOfQuestions";
 import "./community.scss";
 import { ComingSoon } from "./comingSoon";
 import { Helmet } from "react-helmet";
-interface CommunicationForm {
-  question: string;
-}
+// interface CommunicationForm {
+//   question: string;
+// }
 const Community = () => {
   // const [message, setMessage] = useState("");
   // const [messageClass, setMessageClass] = useState("");
