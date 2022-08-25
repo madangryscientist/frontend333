@@ -3,3 +3,80 @@ h2 {
   font-size: 17px;
   color: var(--fontcolor);
 }
+h6{
+  font-size: 30px;
+  margin: auto;
+  padding-bottom: 20px;
+}
+.askUs{
+display: flex;
+margin-top: 30px;
+margin-bottom: 20px;
+font-family: anton;
+font-size: 40px;
+color: #f2fdfa;
+}
+.questionFaq{
+  border: 1px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.question{
+  padding-left: 20px;
+}
+.answerFaq{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid gray;
+}
+.answer{
+  padding-left: 20px;
+}
+.qFaq{
+  padding-left: 5px;
+  padding-right: 5px;
+  border-right: 1px solid gray;
+  color: #6dff1f;
+}
+.aFaq{
+  color: #01646d;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-right: 1px solid gray;
+}
+.faqForm{
+  margin-top: 20px;
+  
+  width: 600px;
+ 
+  
+}
+.outerFaqForm{
+  height: 220px;
+  overflow-y: scroll;
+  border: 1px solid green;
+  box-shadow: 0px 0px 10px green;
+}
+.faqInput{ 
+  margin-top: 10px;
+  margin-bottom:  10px;
+  cursor: pointer;
+  height: 20px;
+  width: 450px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: #121212;
+  box-shadow: 0px 0px 10px #6dff1f;
+  color: var(--fontcolor);
+  font-family: veredana;
+  border: 1px solid #01646d;
+}
+  .faqLabel{
+    display: flex;
+    justify-content: center;
+  }
+  .submitButton{
+    padding-bottom: 20px;
+  }

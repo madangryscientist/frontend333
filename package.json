@@ -1,5 +1,5 @@
 { 
-  "homepage": "https://MoonElf20.github.io/frontend333",
+  
   "name": "frontend333",
   "version": "0.1.0",
   "private": true,
@@ -34,7 +34,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "npm run gh-pages build"
+    "deploy": "yarn run gh-pages build"
   },
   "eslintConfig": {
     "extends": [

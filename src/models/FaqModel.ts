@@ -3,4 +3,6 @@ export interface FaqDbModel {
   question: string;
   answer: string;
   active: boolean;
+  email: string;
+  name: string;
 }

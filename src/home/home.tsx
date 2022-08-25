@@ -1,6 +1,7 @@
 import { SocialButton } from "./socialButton";
 import { Layout } from "../layout/layout";
 import "./home.css";
+import { Helmet } from "react-helmet";
 
 export function HomePage() {
   return (
@@ -9,6 +10,18 @@ export function HomePage() {
         <title>3rdHarmonicRecords</title>
       </head>
       <Layout showAnimation={true}>
+        <Helmet>
+          <title>Home</title>
+          <link rel="canonical" href="/home" />
+          <meta
+            name="description"
+            content="3rdHarmonicRecords home page with links to socialmedia and a short discription of what 3rd harmonic records is all about."
+          />
+          <meta
+            name="keywords"
+            content="3rdHarmonicRecords, home, music, hiphop, beats, music production."
+          />
+        </Helmet>
         <div className="row flex-m-col flex-d-row">
           <div className="col column1">
             <h3 className="headingHome">Who We Are</h3>
@@ -58,6 +71,16 @@ export function HomePage() {
             socialNetworkType="instagram"
             text="HAT3TRICK"
           />
+          <SocialButton
+            href="https://www.instagram.com/da_reel_cap"
+            socialNetworkType="instagram"
+            text="CAPTAIN IVY"
+          />
+          <SocialButton
+            href="https://www.instagram.com/glock.challed"
+            socialNetworkType="instagram"
+            text="GLOCK CHALLED"
+          />
         </div>
         <div className="links">
           <SocialButton
@@ -74,6 +97,11 @@ export function HomePage() {
             href="https://twitter.com/hat3trick"
             socialNetworkType="twitter"
             text="HAT3TRICK"
+          />
+          <SocialButton
+            href=""
+            socialNetworkType="twitter"
+            text="GLOCK CHALLED"
           />
         </div>
       </Layout>

@@ -28,6 +28,7 @@
   padding: 10px;
   text-decoration: none;
   flex-wrap: wrap;
+  width: 800px;
 }
 .flex-d-row {
   display: flex;
