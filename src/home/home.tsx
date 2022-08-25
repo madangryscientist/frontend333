@@ -71,6 +71,16 @@ export function HomePage() {
             socialNetworkType="instagram"
             text="HAT3TRICK"
           />
+          <SocialButton
+            href="https://www.instagram.com/da_reel_cap"
+            socialNetworkType="instagram"
+            text="CAPTAIN IVY"
+          />
+          <SocialButton
+            href="https://www.instagram.com/glock.challed"
+            socialNetworkType="instagram"
+            text="GLOCK CHALLED"
+          />
         </div>
         <div className="links">
           <SocialButton
@@ -87,6 +97,11 @@ export function HomePage() {
             href="https://twitter.com/hat3trick"
             socialNetworkType="twitter"
             text="HAT3TRICK"
+          />
+          <SocialButton
+            href=""
+            socialNetworkType="twitter"
+            text="GLOCK CHALLED"
           />
         </div>
       </Layout>
