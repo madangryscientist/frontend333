@@ -44,3 +44,35 @@
   color: #01646d;
   padding-right: 25px;
 }
+.purchaseBeat{
+  color: white;
+  font-size: 12px;
+}
+.purchaseInput{
+  width: 180px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: #121212;
+  box-shadow: 0px 0px 10px #6dff1f;
+  color: var(--fontcolor);
+  font-family: veredana;
+  border: 1px solid #01646d;
+}
+.purchaseForm{
+  margin-top: 50px;
+}
+.backButton{
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+.message{
+  margin-top: 20px;
+  font-family: serif;
+  font-size: 15px;
+}
