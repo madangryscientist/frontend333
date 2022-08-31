@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./layout.scss";
-import { ContactUsButton } from "./contactsUs";
+
 import { Header } from "./header";
 
 interface LogoProps {
@@ -24,21 +24,57 @@ export const Layout = ({ children, showAnimation = false }: LogoProps) => {
         <div className="contactUsBox">
           <div className={show ? `` : `hide`}>
             <div className="innerContactBox">
-              <ContactUsButton
-                href="mailto: 3rdharmonicrecords@gmail.com?subject=Feedback&body=Message"
-                socialNetworkType="email"
-                text="3rdharmonicrecords@gmail.com"
-              />
-              <ContactUsButton
-                href="https://www.instagram.com/3rdharmonicrecords"
-                socialNetworkType="instagram"
-                text="@3RD HARMONIC RECORDS"
-              />
-              <ContactUsButton
-                href="https://www.instagram.com/iamhat3trick"
-                socialNetworkType="instagram"
-                text="@HAT3TRICK"
-              />
+              <div className="layoutBox ">
+                <a
+                  className="contactATag"
+                  href="mailto: 3rdharmonicrecords@gmail.com?subject=Feedback&body=Message"
+                  target="blank"
+                >
+                  <div className="contactIcon">
+                    <img
+                      src="../email.svg"
+                      alt="email"
+                      width="30px"
+                      height="30px"
+                    />
+                  </div>
+                  <p> 3rdharmonicrecords@gmail.com</p>
+                </a>
+              </div>
+              <div className="layoutBox">
+                <a
+                  className="contactATag"
+                  href="https://www.instagram.com/3rdharmonicrecords"
+                  target="blank"
+                >
+                  <div className="contactIconInstagram">
+                    <img
+                      src="../instagram2.svg"
+                      alt="instagram"
+                      width="30px"
+                      height="30px"
+                    />
+                  </div>
+                  <p>@3RDHARMONICRECORDS</p>
+                </a>
+              </div>
+              <div className="layoutBox">
+                <a
+                  className="contactATag"
+                  href="https://www.instagram.com/iamhat3trick"
+                  target="blank"
+                >
+                  <div className="contactIconInstagram">
+                    <img
+                      src="../instagram2.svg"
+                      alt="instagram"
+                      width="30px"
+                      height="30px"
+                    />
+                  </div>
+                  <p>@HAT3TRICK</p>
+                </a>
+              </div>
             </div>
           </div>
           <div className="contactUs" onClick={() => toggleText()}>

@@ -123,11 +123,12 @@ h1 {
   border: none;
   background: none;
   background-color: black;
+  font-size: 16px;
+  color: var(--fontcolor);
+  margin: 3px;
 }
 a {
   text-decoration: none;
   border-radius: 4px;
-  font-size: 16px;
-  color: var(--fontcolor);
-  margin: 3px;
+
 }
