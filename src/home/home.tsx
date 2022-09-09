@@ -98,11 +98,11 @@ export function HomePage() {
             socialNetworkType="twitter"
             text="HAT3TRICK"
           />
-          <SocialButton
+          {/* <SocialButton
             href=""
             socialNetworkType="twitter"
             text="GLOCK CHALLED"
-          />
+          /> */}
         </div>
       </Layout>
     </div>

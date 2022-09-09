@@ -80,7 +80,7 @@ const Store = () => {
             }}
             rewind={true}
             effect={"coverflow"}
-            grabCursor={true}
+            // grabCursor={true}
             centeredSlides={true}
             slidesPerView={3}
             slidesPerGroup={1}
@@ -105,6 +105,7 @@ const Store = () => {
               return (
                 <SwiperSlide className="storeSwiper" key={element.id}>
                   <Track
+                    trackId={element.id}
                     trackName={element.trackName}
                     bpm={element.bpm}
                     tune={element.tune}

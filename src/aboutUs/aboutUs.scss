@@ -1,7 +1,16 @@
-.comingSoon{
-    margin-top: 150px;
+.outerAbout{
+align-items: center;
+    display: flex;
+    width: 800px;
+    flex-direction: column;
+}
+.aboutUsText{
+    font-size: 20px;
+    font-family: anton;
+}
+.aboutUsHead {
     font-size: 30px;
-    font-family: Verdana;
-    color: #6dff1faa;
-    text-shadow: 2px 2px 10px#01646d;
- }
+    text-align: right;
+    font-family: anton;
+    font-weight: lighter ;
+}
